@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Información de alumno</title>
+    </head>
+    <body>
+        <div class="container">
+            <h3><a href="/alumnos">Volver a la lista de alumnos</a></h3>
+            <h1>Información de alumno</h1>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Código</td>
+                        <td>{{ alumno.codigo }}</td>
+                    </tr>
+                    <tr>
+                        <td>Nombre</td>
+                        <td>{{ alumno.nombre }}</td>
+                    </tr>
+                    <tr>
+                        <td>Apellido</td>
+                        <td>{{ alumno.apellido }}</td>
+                    </tr>
+                    <tr>
+                        <td>Edad</td>
+                        <td>{{ alumno.edad }}</td>
+                    </tr>
+                    <tr>
+                        <td>Ciclo</td>
+                        <td>{{ alumno.ciclo }}</td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+            <h3><a href="/alumnos/edit/{{ alumno._id }}">Editar</a></h3>
+            <form action="/alumnos/delete/{{ alumno._id }}" method="post">
+                <button type="submit">Eliminar</button>
+            </form>
+        </div>
+    </body>
+</html>

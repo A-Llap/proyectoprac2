@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Editar información de producto</title>
+    </head>
+    <body>
+        <div class="container">
+            <h3><a href="/alumnos">Lista de alumnos</a></h3>
+            <h1>Editar información de alumno</h1>
+            <form action="/alumnos/update/{{ alumno._id }}" method="post">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Código</td>
+                            <td><input type="text" name="codigo" value="{{ alumno.codigo }}" /></td>
+                        </tr>
+                        <tr>
+                            <td>Nombre</td>
+                            <td><input type="text" name="nombre" value="{{ alumno.nombre }}" /></td>
+                        </tr>
+                        <tr>
+                            <td>Apellido</td>
+                            <td><input type="text" name="apellido" value="{{ alumno.apellido }}" /></td>
+                        </tr>
+                        <tr>
+                            <td>Edad</td>
+                            <td><input type="text" name="edad" value="{{ alumno.edad }}" /></td>
+                        </tr>
+                        <tr>
+                            <td>Ciclo</td>
+                            <td><input type="text" name="ciclo" value="{{ alumno.ciclo }}" /></td>
+                        </tr>
+
+
+                        <tr>
+                            <td colspan="2"><button type="submit">Actualizar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>
+

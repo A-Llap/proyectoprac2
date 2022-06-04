@@ -1,0 +1,36 @@
+<h1>{{title}}</h1>
+
+<h1> ALUMNOS </h1>
+    <p >
+        <div class="container">
+            <h3><a href="/alumnos/create">Añadir alumno</a></h3>
+            <h1>Lista de alumnos</h1>
+            {{#if alumnos }}
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Edad</th>
+                            <th>Ciclo</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{# each alumnos }}
+                        <tr>
+                            <td><a href="/alumnos/show/{{ _id }}">{{ codigo }}</a></td>
+                            <td>{{ nombre }}</td>
+                            <td>{{ apellido }}</td>
+                            <td>{{ edad }}</td>
+                            <td>{{ ciclo }}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            {{~^~}}
+                <div>Aún no hay alumnos.</div>
+            {{/if}}
+        </div>
+    </p>
